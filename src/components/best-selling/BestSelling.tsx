@@ -7,6 +7,7 @@ import { FaStar } from "react-icons/fa";
 import { cardData } from "@/constant/card"
 import { useEffect } from 'react'
 import Autoplay from 'embla-carousel-autoplay'
+import Link from 'next/link'
 
 function BestSelling() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true})])
@@ -39,7 +40,7 @@ function BestSelling() {
                     <h1 className={aBeeZee.className}>{data.heading}</h1>
 
                     <div className={styles.priceDiv}>
-                      <p>{data.price}    |     {data.rating} <FaStar size={25} color='yellow' className={styles.star} /></p>
+                      <p>{data.price}    |     {data.rating}.0 <FaStar size={25} color='yellow' className={styles.star} /></p>
                     </div>
                   </div>
                 </div>
@@ -51,7 +52,7 @@ function BestSelling() {
         </div>
 
 
-        <button>See more</button>
+        <Link href={"/shop"}><button>See more</button></Link>
       </section>
     </div>
   )

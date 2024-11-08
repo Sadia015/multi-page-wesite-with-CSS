@@ -33,7 +33,7 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/">SHOP</Link>
+                <Link href="/shop">SHOP</Link>
               </li>
               <li>
                 <Link href="/">FEATURES</Link>
@@ -55,7 +55,7 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/">SHOP</Link>
+                <Link href="/shop">SHOP</Link>
               </li>
               <li>
                 <Link href="/">FEATURES</Link>

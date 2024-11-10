@@ -10,7 +10,7 @@ function ProductSection() {
       <section className={styles.product}>
         {cardData.map((item, index) => {
           return (
-            <Link href={`/shop/${item.id}`}>
+            <Link href={`/shop/${item.id}`} key={index}>
                 <div className={styles.card} key={index}>
               <div className={styles.topImgDiv} style={{ backgroundColor: item.backgoundColor }}>
                 <Image src={item.src} alt={"picture"} width={300} height={600} className={styles.cardImg}></Image>

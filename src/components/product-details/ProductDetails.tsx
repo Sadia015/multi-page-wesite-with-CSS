@@ -5,9 +5,9 @@ import {aBeeZee} from '@/font'
 import {cardData} from '@/constant/card'
 
 
-function ProductDetails(props: {cardid: number}) {
+function ProductDetails(props: {cardid: string}) {
   
-  let data = cardData.find((item)=>{return item.id == props.cardid})
+  const data = cardData.find((item)=>{return item.id == (props.cardid) as unknown as number})
 
 
   return (

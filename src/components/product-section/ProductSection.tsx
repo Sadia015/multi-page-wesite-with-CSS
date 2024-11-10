@@ -2,15 +2,16 @@ import styles from './ProductSection.module.css'
 import Image from 'next/image'
 import { IoStar } from "react-icons/io5";
 import { cardData } from "@/constant/card"
+import Link from 'next/link';
 
 function ProductSection() {
   return (
     <div>
       <section className={styles.product}>
-
         {cardData.map((item, index) => {
           return (
-            <div className={styles.card} key={index}>
+            <Link href={`/shop/${item.id}`}>
+                <div className={styles.card} key={index}>
               <div className={styles.topImgDiv} style={{ backgroundColor: item.backgoundColor }}>
                 <Image src={item.src} alt={"picture"} width={300} height={600} className={styles.cardImg}></Image>
               </div>
@@ -22,6 +23,7 @@ function ProductSection() {
                 <p style={{ fontWeight: 600 }}>{item.price}</p>
               </div>
             </div>
+            </Link>
           )
         })}
 
